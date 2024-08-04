@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wow.js@1.2.2/css/libs/animate.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary-color: #1a237e;
@@ -30,8 +32,9 @@
         }
 
         .navbar-brand {
-            font-weight: 600;
-            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1a1a1a;
         }
 
         .nav-link {
@@ -399,16 +402,16 @@
                           <div class="form-row">
                               <div class="form-group col-md-6">
                                   <label for="name">Name</label>
-                                  <input type="text" class="form-control" id="name" required>
+                                  <input type="text" placeholder="Name" class="form-control" id="name" required>
                               </div>
                               <div class="form-group col-md-6">
                                   <label for="email">Email</label>
-                                  <input type="email" class="form-control" id="email" required>
+                                  <input placeholder="Email" type="email" class="form-control" id="email" required>
                               </div>
                           </div>
                           <div class="form-group">
                               <label for="message">Message</label>
-                              <textarea class="form-control" id="message" rows="5" required></textarea>
+                              <textarea placeholder="Message" title="Message" class="form-control" id="message" rows="5" required></textarea>
                           </div>
                           <button type="submit" class="btn btn-book btn-block">Send Message</button>
                       </form>
