@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Scale IDE</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- Monaco Editor -->
+    <link rel="stylesheet" href="https://unpkg.com/monaco-editor/min/vs/editor/editor.main.css">
+    <!-- Konva.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/konva@8.4.0/konva.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col h-screen">
+        <div class="flex flex-grow">
+            <!-- Sidebar -->
+            <div class="sidebar bg-gray-800 text-white" id="sidebar">
+                <div class="sidebar-header">Sidebar</div>
+                <div class="sidebar-content p-2">
+                    <p>This is a resizable sidebar.</p>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="flex flex-grow flex-col">
+                <!-- Editor Container -->
+                <div class="editor-container flex-grow bg-white shadow-md" id="editor"></div>
+                <!-- Terminal Container -->
+                <div class="terminal-container bg-gray-300 p-4 overflow-auto" id="terminal">
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tab-output">Output</a></li>
+                            <li><a href="#tab-console">Console</a></li>
+                            <li><a href="#tab-shell">Shell</a></li>
+                            <li><a href="#tab-ports">Ports</a></li>
+                        </ul>
+                        <div id="tab-output">
+                            <textarea class="tab-textarea" placeholder="Output content here."></textarea>
+                        </div>
+                        <div id="tab-console">
+                            <textarea class="tab-textarea" placeholder="Console output here."></textarea>
+                        </div>
+                        <div id="tab-shell">
+                            <textarea class="tab-textarea" placeholder="Shell commands here."></textarea>
+                        </div>
+                        <div id="tab-ports">
+                            <textarea class="tab-textarea" placeholder="Ports information here."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Sidebar -->
+            <div class="right-sidebar bg-gray-700 text-white" id="right-sidebar">
+                <div class="right-sidebar-header">
+                    <button id="toggle-drawing-tool" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Toggle Drawing Tool</button>
+                </div>
+                <div class="right-sidebar-content p-2 hidden" id="drawing-tool">
+                    <div id="drawing-board" class="w-full h-64 bg-white border border-gray-400"></div>
+                    <div class="mt-2">
+                        <button id="pen-tool" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pen Tool</button>
+                        <button id="shape-tool" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Shape Tool</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- Monaco Editor -->
+    <script src="https://unpkg.com/monaco-editor/min/vs/loader.js"></script>
+    <!-- Konva.js -->
+    <script src="https://cdn.jsdelivr.net/npm/konva@8.4.0/konva.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
